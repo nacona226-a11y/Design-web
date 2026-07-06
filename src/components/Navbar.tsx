@@ -18,7 +18,7 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-10">
-          {["首页", "经验", "成就", "联系"].map((item) => (
+          {["首页", "经验", "联系"].map((item) => (
             <a 
               key={item} 
               href={`#${item}`} 
@@ -46,7 +46,7 @@ export default function Navbar() {
           className="absolute top-full left-0 right-0 bg-white p-6 shadow-xl md:hidden"
         >
           <div className="flex flex-col gap-6">
-            {["首页", "经验", "成就", "联系"].map((item) => (
+            {["首页", "经验", "联系"].map((item) => (
               <a 
                 key={item} 
                 href={`#${item}`} 

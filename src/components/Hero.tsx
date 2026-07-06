@@ -1,67 +1,49 @@
 import { motion } from "motion/react";
 import Typewriter from "./Typewriter";
 
-interface HeroProps {
-  avatarUrl: string;
-}
-
-export default function Hero({ avatarUrl }: HeroProps) {
+export default function Hero() {
   return (
-    <section className="relative flex min-h-[80vh] items-center justify-center px-6 pt-24">
-      <div className="container mx-auto flex flex-col items-center gap-12 md:flex-row md:items-center md:justify-between">
+    <section id="首页" className="relative flex min-h-[80vh] items-center justify-center px-6 pt-24">
+      <div className="container mx-auto flex flex-col items-center gap-12">
         <motion.div 
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="flex-1 space-y-6 text-center md:text-left"
+          className="max-w-4xl space-y-8 text-center"
         >
-          <div className="inline-block rounded-full bg-blue-50 px-4 py-1.5 text-sm font-medium text-blue-600">
+          <div className="inline-block rounded-full bg-blue-50 px-6 py-2 text-sm font-medium text-blue-600">
             资深外贸销售专家
           </div>
-          <h1 className="text-5xl font-bold leading-tight md:text-7xl lg:text-8xl">
+          <h1 className="text-6xl font-bold leading-tight md:text-8xl lg:text-9xl">
             Christin TAO
           </h1>
-          <div className="text-3xl font-medium md:text-4xl lg:text-5xl">
+          <div className="text-3xl font-medium md:text-5xl lg:text-6xl">
             专业从事 <Typewriter phrases={["机械设备", "区域销售", "品牌宣传"]} />
           </div>
-          <p className="max-w-xl text-lg text-secondary md:text-xl leading-relaxed">
+          <p className="mx-auto max-w-2xl text-lg text-secondary md:text-2xl leading-relaxed">
             宏山（HSG）资深外贸销售，专注于激光切割机器在全球市场的宣传与推广。
             凭借深厚的行业积淀，年销售额稳定在 <span className="font-semibold text-primary">1000万美元</span> 以上。
           </p>
           
-          <div className="flex flex-wrap justify-center gap-4 md:justify-start">
-            <button className="rounded-full bg-primary px-8 py-4 text-white transition-all hover:scale-105 hover:bg-slate-800 active:scale-95">
+          <div className="flex flex-wrap justify-center gap-6">
+            <button className="rounded-full bg-primary px-10 py-5 text-lg font-semibold text-white transition-all hover:scale-105 hover:bg-slate-800 active:scale-95 shadow-lg">
               联系我
             </button>
-            <button className="rounded-full border border-slate-200 bg-white/50 px-8 py-4 backdrop-blur-sm transition-all hover:border-blue-200 hover:bg-blue-50/50 active:scale-95">
+            <button className="rounded-full border border-slate-200 bg-white/50 px-10 py-5 text-lg font-semibold backdrop-blur-sm transition-all hover:border-blue-200 hover:bg-blue-50/50 active:scale-95">
               查看作品
             </button>
           </div>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          className="relative flex-shrink-0"
-        >
-          <div className="relative z-10 h-64 w-64 overflow-hidden rounded-full border-4 border-white shadow-2xl md:h-80 md:w-80 lg:h-[450px] lg:w-[450px]">
-            <img 
-              src={avatarUrl} 
-              alt="Christin TAO" 
-              className="h-full w-full object-cover"
-              referrerPolicy="no-referrer"
-            />
-          </div>
-          
-          {/* Decorative Elements for AI Feel */}
-          <div className="absolute -inset-4 -z-10 animate-pulse rounded-full bg-linear-to-tr from-blue-400/20 via-purple-400/20 to-pink-400/20 blur-2xl" />
+        {/* Decorative Elements for AI Feel */}
+        <div className="relative mt-12 h-2 w-full max-w-md overflow-hidden rounded-full bg-slate-100">
           <motion.div 
-            animate={{ rotate: 360 }}
-            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-            className="absolute -inset-8 -z-10 rounded-full border border-dashed border-blue-200/50"
+            initial={{ left: "-100%" }}
+            animate={{ left: "100%" }}
+            transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+            className="absolute top-0 h-full w-1/2 bg-linear-to-r from-transparent via-blue-500 to-transparent"
           />
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -4,21 +4,22 @@ import { Briefcase, Globe, Target, TrendingUp } from "lucide-react";
 const stats = [
   { label: "年销售额", value: "$10M+", icon: TrendingUp, color: "text-green-600", bg: "bg-green-50" },
   { label: "覆盖地区", value: "中东 4+", icon: Globe, color: "text-blue-600", bg: "bg-blue-50" },
-  { label: "大客户开发", value: "资深", icon: Target, color: "text-purple-600", bg: "bg-purple-50" },
-  { label: "行业经验", value: "8+ 年", icon: Briefcase, color: "text-orange-600", bg: "bg-orange-50" },
+  { label: "大客户开发", value: "专家级", icon: Target, color: "text-purple-600", bg: "bg-purple-50" },
+  { label: "行业经验", value: "2 年", icon: Briefcase, color: "text-orange-600", bg: "bg-orange-50" },
 ];
 
 const experiences = [
   {
     company: "宏山激光 (HSG Laser)",
     role: "资深外贸销售",
-    period: "2018 - 至今",
-    description: "负责激光切割机器在中东地区的品牌宣传与销售推广。擅长深耕大客户及分销渠道建设，致力于为客户提供高效的金属加工解决方案。",
+    period: "2024 - 至今",
+    description: "作为宏山激光中东区域的核心销售负责人，我深耕巴林、约旦、阿曼、卡塔尔等关键市场。激光切割机器作为精密工业设备，其销售不仅涉及产品本身的推广，更涵盖了复杂的工艺对接、售后保障体系构建以及品牌长期价值的传递。在两年的深度实操中，我通过差异化竞争策略，成功将HSG品牌在当地的市占率提升至领先地位，年均贡献业绩稳超千万美元。",
     highlights: [
-      "实现中东地区（巴林、约旦、阿曼、卡塔尔）年均销售额突破1000万美元",
-      "成功开发并维护多个中东地区顶级金属加工制造大客户",
-      "建立了完善的区域售后服务体系与代理商网络",
-      "多次代表公司参加国际展会，提升HSG品牌知名度"
+      "精通中东地区贸易规则与文化习俗，成功打通巴林、约旦、阿曼、卡塔尔四国销售网络，实现年销售额1000万美元的跨越式增长。",
+      "主导开发并深度维护了多家产值超亿元的金属加工龙头企业，通过提供定制化切割解决方案（包含光纤激光切割机及配套自动化设备），赢得了极高的客户复购率。",
+      "针对激光行业对售后依赖度高的痛点，在目标区域建立了多维度的代理商考核与服务体系，确保了极速响应的服务能力，显著增强了品牌美誉度。",
+      "具备极强的市场敏锐度，擅长通过数字化营销、专业领英运营及线下大客户直销相结合的方式，实现高净值潜客的精准转化与品牌溢价。",
+      "多次作为主讲人参与中东地区工业机械高峰论坛及国际大型工业展会，不仅达成了高额成交，更有效地输出并固化了HSG作为行业领跑者的品牌形象。"
     ]
   }
 ];
@@ -49,42 +50,42 @@ export default function Experience() {
 
         {/* Experience Content */}
         <div className="space-y-12">
-          <div className="max-w-2xl">
-            <h2 className="text-4xl font-bold mb-4">核心经验</h2>
-            <p className="text-lg text-secondary">
-              在激光切割机器外贸领域拥有深厚的实战经验，专注于中东高增长市场的战略布局。
+          <div className="max-w-3xl">
+            <h2 className="text-5xl font-bold mb-6">核心经验</h2>
+            <p className="text-xl text-secondary leading-relaxed">
+              在激光切割机器外贸领域拥有卓越的实战经验，专注于中东高增长市场的战略布局。我致力于将中国制造的高端装备推向全球，通过技术创新与本地化服务的深度结合，为全球客户创造价值。
             </p>
           </div>
 
-          <div className="grid gap-8">
+          <div className="grid gap-12">
             {experiences.map((exp, index) => (
               <motion.div
                 key={exp.company}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="overflow-hidden rounded-3xl bg-white/80 border border-slate-100 shadow-sm backdrop-blur-xl"
+                className="overflow-hidden rounded-[2.5rem] bg-white/80 border border-slate-100 shadow-sm backdrop-blur-xl"
               >
-                <div className="p-8 md:p-12">
-                  <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
+                <div className="p-8 md:p-16">
+                  <div className="flex flex-col md:flex-row md:items-center justify-between mb-12 gap-6">
                     <div>
-                      <h3 className="text-2xl font-bold text-primary mb-1">{exp.role}</h3>
-                      <div className="text-lg font-medium text-blue-600">{exp.company}</div>
+                      <h3 className="text-3xl font-bold text-primary mb-2">{exp.role}</h3>
+                      <div className="text-2xl font-medium text-blue-600">{exp.company}</div>
                     </div>
-                    <div className="rounded-full bg-slate-100 px-4 py-2 text-sm font-medium text-secondary self-start">
+                    <div className="rounded-full bg-slate-100 px-6 py-2.5 text-base font-medium text-secondary self-start">
                       {exp.period}
                     </div>
                   </div>
                   
-                  <p className="text-lg text-secondary mb-10 leading-relaxed max-w-4xl">
+                  <p className="text-xl text-secondary mb-12 leading-relaxed max-w-5xl">
                     {exp.description}
                   </p>
 
-                  <div className="grid md:grid-cols-2 gap-6">
+                  <div className="grid md:grid-cols-1 gap-8">
                     {exp.highlights.map((highlight, hIndex) => (
-                      <div key={hIndex} className="flex gap-4">
-                        <div className="mt-1.5 flex-shrink-0 h-2 w-2 rounded-full bg-blue-600" />
-                        <p className="text-slate-700 font-medium">{highlight}</p>
+                      <div key={hIndex} className="flex gap-6 group">
+                        <div className="mt-2.5 flex-shrink-0 h-3 w-3 rounded-full bg-blue-600 group-hover:scale-125 transition-transform" />
+                        <p className="text-slate-700 text-lg font-medium leading-relaxed">{highlight}</p>
                       </div>
                     ))}
                   </div>
