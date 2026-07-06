@@ -21,8 +21,8 @@ export default function Contact() {
 
             <div className="space-y-6">
               {[
-                { icon: Mail, label: "邮箱", value: "christin.tao@hsg-laser.com" },
-                { icon: Phone, label: "电话/WhatsApp", value: "15655577323" },
+                { icon: Mail, label: "邮箱", value: "Christin@hsglaser.com" },
+                { icon: Phone, label: "电话/WhatsApp", value: "86 17755512146" },
                 { icon: MapPin, label: "办公地点", value: "中国 · 佛山 / 中东巡访中" }
               ].map((item, index) => (
                 <motion.div 
